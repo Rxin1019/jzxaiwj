@@ -1,0 +1,133 @@
+.layer {
+    width: 1190px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.first-floor {
+    width: 1190px;
+    float: left;
+    height: 358px;
+    background-color: white;
+}
+
+.layer .bt1 {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.layer .bt1 .bt2 {
+    display: none;
+}
+
+.layer .bt1 img {
+    height: 24px;
+    margin-right: 5px;
+    float: left;
+}
+
+.layer .bt1 .bt3 {
+    line-height: 24px;
+    height: 24px;
+    color: #999;
+    font-weight: 400;
+    margin-left: 6px;
+}
+
+.layer .first-floor ul a {
+    display: block;
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    margin: 0 14px 17px 0;
+}
+
+.first-floor a .img-wrapper img {
+    width: 100%;
+    height: 180px;
+    display: block;
+    opacity: .9;
+    transition: all .2s;
+}
+
+.first-floor a .info {
+    overflow: hidden;
+    padding: 0 4px 0 6px;
+}
+
+.first-floor a h4 {
+    margin-top: 5px;
+    font-size: 16px;
+    height: 28px;
+    overflow: hidden;
+    line-height: 28px;
+    font-weight: normal;
+}
+
+.first-floor a p {
+    line-height: 24px;
+    color: #999;
+    font-size: 14px;
+    overflow: hidden;
+    height: 24px;
+}
+
+.first-floor a p.extra {
+    line-height: 22px;
+    height: 22px;
+    margin-top: 12px;
+    color: #35b1ff;
+}
+
+.second-floor {
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+    width: 1190px;
+    height: 70px;
+}
+
+.three-floor {
+    width: 1190px;
+    height: 538px;
+}
+
+.three-floor .three-floor-l {
+    width: 590px;
+    height: 538px;
+    float: left;
+    background-color: #fff;
+}
+
+.three-floor .three-floor-r {
+    width: 590px;
+    height: 538px;
+    margin-left: 10px;
+    float: left;
+    background-color: #fff;
+}
+
+.four-floor {
+    width: 1190px;
+    height: 290px;
+    background: #333;
+}
+
+.five-floor {
+    width: 1190px;
+    height: 962px;
+    background: #666;
+}
+
+.six-floor {
+    width: 1190px;
+    height: 8120px;
+    background: grey;
+}
+
+.seven-floor {
+    width: 1190px;
+    height: 180px;
+    background: black;
+}

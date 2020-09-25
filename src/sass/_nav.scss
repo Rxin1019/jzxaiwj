@@ -1,0 +1,41 @@
+nav {
+    width: 100%;
+    height: 30px;
+    // background: red;
+}
+
+.screen-nav-warp {
+    width: 1190px;
+    height: 30px;
+    background-image: linear-gradient(to right, #ff9900 0, #ff5500 100%);
+    margin: 0 auto;
+}
+
+nav .screen-nav-warp h2 {
+    width: 190px;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ff5000;
+    line-height: 30px;
+    float: left;
+}
+
+nav .screen-nav-warp ul {
+    float: left;
+}
+
+nav .screen-nav-warp ul li {
+    float: left;
+    margin: 0 4px;
+    padding: 0 4px;
+    position: relative;
+}
+
+nav .screen-nav-warp ul li a {
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+    font-weight: 700;
+}

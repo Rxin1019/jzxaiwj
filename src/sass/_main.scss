@@ -1,0 +1,368 @@
+section {
+    width: 1190px;
+    margin: 0 auto;
+    height: 522px;
+}
+
+section .mian {
+    width: 890px;
+    height: 522px;
+    float: left;
+}
+
+section .mian .mian-inner {
+    width: 890px;
+    height: 522px;
+}
+
+section .mian .mian-inner .inner-lf {
+    width: 190px;
+    height: 100%;
+    border: 1px solid #f40;
+    border-top: none;
+    float: left;
+    background-color: #fff;
+}
+
+section .mian .mian-inner .inner-lf li {
+    width: 150px;
+    height: 32px;
+    padding-left: 25px;
+    padding-right: 14px;
+    position: relative;
+}
+
+section .mian .mian-inner .inner-lf li:hover {
+    background-color: #ffe4dc;
+}
+
+section .mian .mian-inner .inner-lf li:hover a {
+    color: #ff5000;
+}
+
+section .mian .mian-inner .inner-lf li a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 32px;
+    text-align: center;
+}
+
+section .mian .mian-inner .inner-lf li span {
+    display: inline-block;
+    width: 5px;
+    height: 8px;
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    background: url('images/yjt.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+section .mian .mian-inner .inner-cer {
+    width: 520px;
+    height: 100%;
+    float: left;
+}
+
+section .mian .mian-inner .inner-cer .pic-box {
+    padding: 8px;
+    padding-right: 0;
+    width: 520px;
+    height: 280px;
+    overflow: hidden;
+}
+
+section .mian .mian-inner .inner-bt {
+    width: 520px;
+    height: 230px;
+    padding: 0 8px;
+}
+
+section .mian .mian-inner .inner-bt span {
+    font-size: 12px;
+    color: #666;
+}
+
+section .mian .mian-inner .inner-rt {
+    padding: 8px;
+    width: 160px;
+    height: 520px;
+    float: left;
+}
+
+section .mian .mian-inner .inner-rt .hot {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+
+/* 右侧部分 */
+
+section .box-right {
+    width: 290px;
+    height: 632px;
+    float: left;
+    margin-left: 8px;
+}
+
+section .box-right .member {
+    padding: 3px 0 2px 0;
+    width: 290px;
+    height: 132px;
+    background: url(../img/bg.png) no-repeat;
+    background-size: 290px 145px;
+}
+
+section .box-right .member .member-head {
+    width: 290px;
+    height: 91px;
+}
+
+section .box-right .member-head .head {
+    display: block;
+    margin: 0 auto;
+    width: 56px;
+    height: 56px;
+}
+
+.box-right .member-head .head .head-warp {
+    display: inline-block;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background-clip: padding-box;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+section .box-right .member-head .hello {
+    display: inline-block;
+    width: 290px;
+    height: 17px;
+    line-height: 17px;
+    font-size: 12px;
+    columns: #3c3c3c;
+    text-align: center;
+}
+
+section .box-right .member-head p {
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+}
+
+section .box-right .member-head p a {
+    display: inline-block;
+    width: 72px;
+    height: 17px;
+    border-radius: 6px;
+    background-color: #ffe4dc;
+    line-height: 17px;
+    font-size: 12px;
+    color: #f40;
+    padding-left: 20px;
+    padding-right: 8px;
+    position: relative;
+}
+
+section .box-right .member-head p span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/jinbi.png);
+}
+
+section .box-right .member-head .tb {
+    background: url(../img/jinbi.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+section .box-right .member-head .meb {
+    background: url(../img/huiyuan.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+section .box-right .member-foot {
+    width: 290px;
+    height: 30px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+section .box-right .member-foot a {
+    display: inline-block;
+    width: 75px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    margin: 0 6px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, #ff9900 0, #ff5500 100%);
+}
+
+section .box-right .massage {
+    background-color: #fff;
+}
+
+section .box-right .massage a {
+    display: inline-block;
+    width: 290px;
+    height: 65px;
+}
+
+section .box-right .massage img {
+    width: 290px;
+    height: 65px;
+}
+
+section .box-right .notice {
+    width: 290px;
+    height: 67px;
+    padding-top: 10px;
+}
+
+section .box-right .notice .title {
+    width: 270px;
+    height: 24px;
+    padding-left: 20px;
+}
+
+section .box-right .notice .title ul li {
+    float: left;
+    width: 45px;
+    height: 24px;
+    text-align: center;
+    margin-right: 6px;
+}
+
+section .box-right .notice .title ul li a {
+    font-size: 13px;
+    color: #000;
+    line-height: 24px;
+    padding: 0 2px;
+}
+
+section .box-right .notice .title ul li a.active {
+    border-bottom: 2px solid #ff5000;
+}
+
+section .box-right .notice .content {
+    width: 100%;
+    padding: 9px;
+    box-sizing: border-box;
+}
+
+section .box-right .notice .content li {
+    float: left;
+    width: 130px;
+    height: 25px;
+    padding-right: 3px;
+}
+
+section .box-right .notice .content li a {
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+    color: #000;
+}
+
+section .box-right .notice .title ul li a:hover,
+section .box-right .notice .content li a.active,
+section .box-right .notice .content ul li a:hover {
+    color: #ff5500;
+}
+
+section .box-right .mobule {
+    width: 290px;
+    height: 155px;
+}
+
+section .box-right .mobule li {
+    float: left;
+    width: 70px;
+    height: 72px;
+    border: 1px solid #f4f4f4;
+}
+
+section .box-right .mobule li:hover {
+    border: 1px solid #ff5500;
+}
+
+section .box-right .mobule li:hover p {
+    color: #ff5500;
+}
+
+section .box-right .mobule li a {
+    display: inline-block;
+    padding-top: 15px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+section .box-right .mobule li a img {
+    width: 24px;
+    height: 24px;
+}
+
+section .box-right .mobule li a span.icon1 {
+    background-position: 0 0;
+}
+
+section .box-right .mobule li a span.icon2 {
+    background-position: 0 -44px;
+}
+
+section .box-right .mobule li a span.icon3 {
+    background-position: 0 -88px;
+}
+
+section .box-right .mobule li a span.icon4 {
+    background-position: 0 -172px;
+}
+
+section .box-right .mobule li a p {
+    color: #000;
+    font-size: 12px;
+}
+
+section .box-right .app h3 {
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 10px;
+    position: relative;
+}
+
+section .box-right .app h3 .many {
+    position: absolute;
+    right: 20px;
+    font-size: 13px;
+    height: 15px;
+    color: #333;
+    font-weight: 300;
+}
+
+section .box-right .app h3 .many:hover {
+    color: #ff5000;
+}
+
+section .box-right .app li {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin: 10px;
+}
+
+section .box-right .app li img {
+    width: 100%;
+    height: 100%;
+}
