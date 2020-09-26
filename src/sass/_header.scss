@@ -1,23 +1,62 @@
+$l:left;
+$r:right;
+@mixin float($lr:left) {
+    float: $lr
+}
+
+@mixin color($c:#f22e00) {
+    color: $c;
+}
+
+@mixin lineH($lh:35px) {
+    line-height: $lh
+}
+
+@mixin w($w:1190px) {
+    width: $w
+}
+
+@mixin h($h:35px) {
+    height: $h
+}
+
+@mixin fontSize($fs:12px) {
+    font-size: $fs
+}
+
 header {
-    width: 1190px;
-    height: 35px;
+    @include w;
+    @include h;
     background: #f5f5f5;
     margin: 0 auto;
-}
-
-.top-nav-l {
-    float: left;
-}
-
-header .top-nav-menu {
-    float: left;
-    margin-right: 7px;
-}
-
-.region {
-    margin-left: 5px;
-    line-height: 35px;
-    font-size: 12px;
+    .top-nav-l {
+        @include float;
+        .region {
+            margin-#{$l}: 5px;
+            @include lineH;
+            @include fontSize;
+        }
+        .login {
+            @include color;
+            margin-#{$l}: 10px;
+        }
+    }
+    .top-nav-r {
+        @include float(right);
+    }
+    .top-nav-menu {
+        @include float;
+        margin-#{$r}: 7px;
+    }
+    a {
+        @include color(#6c6c6c);
+        @include fontSize;
+        @include lineH;
+        padding-#{$r}: 6px;
+    }
+    li a:hover {
+        @include color;
+    }
 }
 
 @font-face {
@@ -27,34 +66,14 @@ header .top-nav-menu {
 
 .site-nav-icon {
     font-family: global-iconfont;
-    font-size: 12px;
+    @include fontSize;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscaleFont type;
-    margin-right: 5px;
-    color: #9c9c9c
+    margin-#{$r}: 5px;
+    @include color(#9c9c9c);
 }
 
 .site-nav-icon-highlight {
-    color: #f40;
-}
-
-header a {
-    color: #6c6c6c;
-    font-size: 12px;
-    line-height: 35px;
-    padding-right: 6px;
-}
-
-header li a:hover {
-    color: #f22e00;
-}
-
-header .top-nav-l .login {
-    color: #f22e00;
-    margin-left: 10px;
-}
-
-.top-nav-r {
-    float: right;
+    @include color(#f40);
 }

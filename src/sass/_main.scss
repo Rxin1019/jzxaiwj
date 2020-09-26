@@ -1,368 +1,386 @@
+$l:left;
+$r:right;
+$t:top;
+$b:bottom;
+@mixin float($lr:left) {
+    float: $lr
+}
+
+@mixin color($c:#f22e00) {
+    color: $c;
+}
+
+@mixin lineH($lh:35px) {
+    line-height: $lh
+}
+
+@mixin w($w:1190px) {
+    width: $w
+}
+
+@mixin h($h:35px) {
+    height: $h
+}
+
+@mixin fontSize($fs:12px) {
+    font-size: $fs
+}
+
 section {
-    width: 1190px;
+    @include w(1190px);
+    @include h(522px);
     margin: 0 auto;
-    height: 522px;
-}
-
-section .mian {
-    width: 890px;
-    height: 522px;
-    float: left;
-}
-
-section .mian .mian-inner {
-    width: 890px;
-    height: 522px;
-}
-
-section .mian .mian-inner .inner-lf {
-    width: 190px;
-    height: 100%;
-    border: 1px solid #f40;
-    border-top: none;
-    float: left;
-    background-color: #fff;
-}
-
-section .mian .mian-inner .inner-lf li {
-    width: 150px;
-    height: 32px;
-    padding-left: 25px;
-    padding-right: 14px;
-    position: relative;
-}
-
-section .mian .mian-inner .inner-lf li:hover {
-    background-color: #ffe4dc;
-}
-
-section .mian .mian-inner .inner-lf li:hover a {
-    color: #ff5000;
-}
-
-section .mian .mian-inner .inner-lf li a {
-    font-size: 14px;
-    font-weight: 400;
-    color: #666;
-    line-height: 32px;
-    text-align: center;
-}
-
-section .mian .mian-inner .inner-lf li span {
-    display: inline-block;
-    width: 5px;
-    height: 8px;
-    position: absolute;
-    right: 5px;
-    top: 12px;
-    background: url('images/yjt.png') no-repeat;
-    background-size: 100% 100%;
-}
-
-section .mian .mian-inner .inner-cer {
-    width: 520px;
-    height: 100%;
-    float: left;
-}
-
-section .mian .mian-inner .inner-cer .pic-box {
-    padding: 8px;
-    padding-right: 0;
-    width: 520px;
-    height: 280px;
-    overflow: hidden;
-}
-
-section .mian .mian-inner .inner-bt {
-    width: 520px;
-    height: 230px;
-    padding: 0 8px;
-}
-
-section .mian .mian-inner .inner-bt span {
-    font-size: 12px;
-    color: #666;
-}
-
-section .mian .mian-inner .inner-rt {
-    padding: 8px;
-    width: 160px;
-    height: 520px;
-    float: left;
-}
-
-section .mian .mian-inner .inner-rt .hot {
-    margin-top: 10px;
-    font-size: 12px;
-}
-
-
-/* 右侧部分 */
-
-section .box-right {
-    width: 290px;
-    height: 632px;
-    float: left;
-    margin-left: 8px;
-}
-
-section .box-right .member {
-    padding: 3px 0 2px 0;
-    width: 290px;
-    height: 132px;
-    background: url(../img/bg.png) no-repeat;
-    background-size: 290px 145px;
-}
-
-section .box-right .member .member-head {
-    width: 290px;
-    height: 91px;
-}
-
-section .box-right .member-head .head {
-    display: block;
-    margin: 0 auto;
-    width: 56px;
-    height: 56px;
-}
-
-.box-right .member-head .head .head-warp {
-    display: inline-block;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    background-clip: padding-box;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    overflow: hidden;
-}
-
-section .box-right .member-head .hello {
-    display: inline-block;
-    width: 290px;
-    height: 17px;
-    line-height: 17px;
-    font-size: 12px;
-    columns: #3c3c3c;
-    text-align: center;
-}
-
-section .box-right .member-head p {
-    height: 17px;
-    line-height: 17px;
-    text-align: center;
-}
-
-section .box-right .member-head p a {
-    display: inline-block;
-    width: 72px;
-    height: 17px;
-    border-radius: 6px;
-    background-color: #ffe4dc;
-    line-height: 17px;
-    font-size: 12px;
-    color: #f40;
-    padding-left: 20px;
-    padding-right: 8px;
-    position: relative;
-}
-
-section .box-right .member-head p span {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(../img/jinbi.png);
-}
-
-section .box-right .member-head .tb {
-    background: url(../img/jinbi.png) no-repeat;
-    background-size: 100% 100%;
-}
-
-section .box-right .member-head .meb {
-    background: url(../img/huiyuan.png) no-repeat;
-    background-size: 100% 100%;
-}
-
-section .box-right .member-foot {
-    width: 290px;
-    height: 30px;
-    padding-top: 10px;
-    text-align: center;
-}
-
-section .box-right .member-foot a {
-    display: inline-block;
-    width: 75px;
-    height: 25px;
-    text-align: center;
-    line-height: 25px;
-    color: #fff;
-    margin: 0 6px;
-    font-size: 14px;
-    font-weight: 700;
-    border-radius: 6px;
-    background-image: linear-gradient(to right, #ff9900 0, #ff5500 100%);
-}
-
-section .box-right .massage {
-    background-color: #fff;
-}
-
-section .box-right .massage a {
-    display: inline-block;
-    width: 290px;
-    height: 65px;
-}
-
-section .box-right .massage img {
-    width: 290px;
-    height: 65px;
-}
-
-section .box-right .notice {
-    width: 290px;
-    height: 67px;
-    padding-top: 10px;
-}
-
-section .box-right .notice .title {
-    width: 270px;
-    height: 24px;
-    padding-left: 20px;
-}
-
-section .box-right .notice .title ul li {
-    float: left;
-    width: 45px;
-    height: 24px;
-    text-align: center;
-    margin-right: 6px;
-}
-
-section .box-right .notice .title ul li a {
-    font-size: 13px;
-    color: #000;
-    line-height: 24px;
-    padding: 0 2px;
-}
-
-section .box-right .notice .title ul li a.active {
-    border-bottom: 2px solid #ff5000;
-}
-
-section .box-right .notice .content {
-    width: 100%;
-    padding: 9px;
-    box-sizing: border-box;
-}
-
-section .box-right .notice .content li {
-    float: left;
-    width: 130px;
-    height: 25px;
-    padding-right: 3px;
-}
-
-section .box-right .notice .content li a {
-    height: 25px;
-    line-height: 25px;
-    font-size: 13px;
-    color: #000;
-}
-
-section .box-right .notice .title ul li a:hover,
-section .box-right .notice .content li a.active,
-section .box-right .notice .content ul li a:hover {
-    color: #ff5500;
-}
-
-section .box-right .mobule {
-    width: 290px;
-    height: 155px;
-}
-
-section .box-right .mobule li {
-    float: left;
-    width: 70px;
-    height: 72px;
-    border: 1px solid #f4f4f4;
-}
-
-section .box-right .mobule li:hover {
-    border: 1px solid #ff5500;
-}
-
-section .box-right .mobule li:hover p {
-    color: #ff5500;
-}
-
-section .box-right .mobule li a {
-    display: inline-block;
-    padding-top: 15px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-section .box-right .mobule li a img {
-    width: 24px;
-    height: 24px;
-}
-
-section .box-right .mobule li a span.icon1 {
-    background-position: 0 0;
-}
-
-section .box-right .mobule li a span.icon2 {
-    background-position: 0 -44px;
-}
-
-section .box-right .mobule li a span.icon3 {
-    background-position: 0 -88px;
-}
-
-section .box-right .mobule li a span.icon4 {
-    background-position: 0 -172px;
-}
-
-section .box-right .mobule li a p {
-    color: #000;
-    font-size: 12px;
-}
-
-section .box-right .app h3 {
-    font-size: 14px;
-    line-height: 30px;
-    padding-left: 10px;
-    position: relative;
-}
-
-section .box-right .app h3 .many {
-    position: absolute;
-    right: 20px;
-    font-size: 13px;
-    height: 15px;
-    color: #333;
-    font-weight: 300;
-}
-
-section .box-right .app h3 .many:hover {
-    color: #ff5000;
-}
-
-section .box-right .app li {
-    float: left;
-    width: 32px;
-    height: 32px;
-    margin: 10px;
-}
-
-section .box-right .app li img {
-    width: 100%;
-    height: 100%;
+    .mian {
+        @include w(900px);
+        @include h(522px);
+        @include float;
+        .mian-inner {
+            @include w(900px);
+            @include h(522px);
+            .inner-lf {
+                @include w(188px);
+                @include h(100%);
+                border: 1px solid #f40;
+                border-#{$t}: none;
+                @include float;
+                background-color: #fff;
+                li {
+                    @include w(150px);
+                    @include h(32px);
+                    padding-#{$l}: 25px;
+                    padding-#{$r}: 14px;
+                    position: relative;
+                    span {
+                        display: inline-block;
+                        @include w(5px);
+                        @include h(8px);
+                        position: absolute;
+                        #{$r}: 5px;
+                        #{$t}: 12px;
+                        background: url('images/yjt.png') no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+                li:hover {
+                    background-color: #ffe4dc;
+                }
+                li:hover a {
+                    @include color( #ff5000);
+                }
+                li a {
+                    @include fontSize(14px);
+                    font-weight: 400;
+                    color: #666;
+                    @include lineH(32px);
+                    text-align: center;
+                }
+            }
+            .inner-cer {
+                @include w(520px);
+                @include h(512px);
+                @include float;
+                margin: 10px 10px 0 10px;
+                .pic-box {
+                    @include w(520px);
+                    @include h(280px);
+                    overflow: hidden;
+                }
+                .inner-bt {
+                    @include w(520px);
+                    @include h(230px);
+                    .lb2 {
+                        @include w(520px);
+                        @include h(201px);
+                        overflow: hidden;
+                        a {
+                            display: block;
+                            margin-#{$t}: 6px;
+                            // @include w(130px);
+                            // @include h(201px);
+                            overflow: hidden;
+                            margin-#{$l}: 6px;
+                            float: left;
+                            img {
+                                @include h(155px);
+                            }
+                        }
+                    }
+                    .head {
+                        @include fontSize(14px);
+                        padding-#{$t}: 11px;
+                        border-#{$b}: 3px solid #ff1648;
+                        position: relative;
+                        background-color: #f1f1f1;
+                        .head-inner {
+                            @include h(18px);
+                            @include lineH(18px);
+                            position: relative;
+                            .head-bg {
+                                @include w(136px);
+                                @include h(19px);
+                                position: absolute;
+                                background-image: url(../img/tm.png);
+                                background-repeat: no-repeat;
+                                background-position: 2px 0;
+                                background-size: 122px 22px;
+                            }
+                            em {
+                                @include fontSize;
+                                font-style: normal;
+                                color: #666;
+                                position: relative;
+                                margin-#{$l}: 136px;
+                            }
+                            strong {
+                                position: absolute;
+                                #{$r}: 0;
+                                font-family: sans-serif;
+                                @include fontSize;
+                                font-weight: 400;
+                                i {
+                                    font-style: normal;
+                                    color: #ff1648;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .inner-rt {
+                margin-top: 10px;
+                @include w(160px);
+                @include h(512px);
+                @include float;
+                .hot {
+                    margin-#{$t}: 1px;
+                    @include h(230px);
+                    span {
+                        @include fontSize;
+                        font-weight: 400;
+                        background: #f1f1f1;
+                        @include color(#a1a1a1);
+                        @include lineH(24px);
+                        padding-#{$t}: 6px;
+                    }
+                }
+            }
+        }
+    }
+    /* 右侧部分 */
+    .box-right {
+        @include w(290px);
+        @include h(522px);
+        @include float;
+        .member {
+            padding: 3px 0 2px 0;
+            @include w(290px);
+            @include h(132px);
+            background: url(../img/bg.png) no-repeat;
+            background-size: 290px 145px;
+            .member-head {
+                @include w(290px);
+                @include h(91px);
+                .head {
+                    display: block;
+                    margin: 0 auto;
+                    @include w(56px);
+                    @include h(56px);
+                    .head-warp {
+                        display: inline-block;
+                        border: 3px solid #fff;
+                        border-radius: 50%;
+                        background-clip: padding-box;
+                        @include w(50px);
+                        @include h(50px);
+                        @include lineH(50px);
+                        overflow: hidden;
+                    }
+                }
+                .hello {
+                    display: inline-block;
+                    @include w(290px);
+                    @include h(17px);
+                    @include lineH(17px);
+                    @include fontSize;
+                    columns: #3c3c3c;
+                    text-align: center;
+                }
+                p {
+                    @include h(17px);
+                    @include lineH(17px);
+                    text-align: center;
+                    a {
+                        display: inline-block;
+                        @include w(72px);
+                        @include h(17px);
+                        @include lineH(17px);
+                        border-radius: 6px;
+                        background-color: #ffe4dc;
+                        @include fontSize;
+                        @include color(#f40);
+                        padding-#{$l}: 20px;
+                        padding-#{$r}: 8px;
+                        position: relative;
+                    }
+                    span {
+                        display: block;
+                        @include w(16px);
+                        @include h(16px);
+                        position: absolute;
+                        #{$t}: 0;
+                        #{$l}: 0;
+                        background: url(../img/jinbi.png);
+                    }
+                    .tb {
+                        background: url(../img/jinbi.png) no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .meb {
+                        background: url(../img/huiyuan.png) no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+            .member-foot {
+                @include w(290px);
+                @include h(30px);
+                padding-top: 10px;
+                text-align: center;
+                a {
+                    display: inline-block;
+                    @include w(75px);
+                    @include h(25px);
+                    @include lineH(25px);
+                    text-align: center;
+                    color: #fff;
+                    margin: 0 6px;
+                    @include fontSize(14px);
+                    font-weight: 700;
+                    border-radius: 6px;
+                    background-image: linear-gradient(to right, #ff9900 0, #ff5500 100%);
+                }
+            }
+        }
+        .massage {
+            background-color: #fff;
+            a {
+                display: inline-block;
+                @include w(290px);
+                @include h(65px);
+                img {
+                    @include w(290px);
+                    @include h(65px);
+                }
+            }
+        }
+        .notice {
+            @include w(290px);
+            @include h(67px);
+            padding-#{$t}: 10px;
+            .title {
+                @include w(270px);
+                @include h(24px);
+                padding-#{$l}: 20px;
+                li {
+                    @include float;
+                    @include w(45px);
+                    @include h(24px);
+                    text-align: center;
+                    margin-#{$r}: 6px;
+                    a {
+                        @include fontSize(13px);
+                        color: #000;
+                        @include lineH(24px);
+                        padding: 0 2px;
+                    }
+                    a.active {
+                        border-bottom: 2px solid #ff5000;
+                    }
+                    a:hover {
+                        @include color(#ff5500);
+                    }
+                }
+            }
+            .content {
+                @include w(100%);
+                padding: 9px;
+                box-sizing: border-box;
+                li {
+                    @include w(130px);
+                    @include h(25px);
+                    @include float;
+                    padding-#{$r}: 3px;
+                    a {
+                        @include h(25px);
+                        @include lineH(25px);
+                        @include fontSize(13px);
+                        color: #000;
+                    }
+                    a.active,
+                    a:hover {
+                        @include color(#ff5500);
+                    }
+                }
+            }
+        }
+        .mobule {
+            @include w(290px);
+            @include h(155px);
+            li {
+                @include w(70px);
+                @include h(72px);
+                @include float;
+                border: 1px solid #f4f4f4;
+                a {
+                    display: inline-block;
+                    padding-#{$t}: 15px;
+                    @include w(100%);
+                    @include h(100%);
+                    text-align: center;
+                    box-sizing: border-box;
+                    img {
+                        @include w(24px);
+                        @include h(24px);
+                    }
+                    p {
+                        @include color(#000);
+                        @include fontSize;
+                    }
+                }
+            }
+            li:hover {
+                border: 1px solid #ff5500;
+            }
+            li:hover p {
+                @include color(#ff5500);
+            }
+        }
+        .app h3 {
+            @include fontSize(14px);
+            @include lineH(30px);
+            padding-#{$l}: 10px;
+            position: relative;
+            .many {
+                position: absolute;
+                #{$r}: 20px;
+                @include fontSize(13px);
+                @include h(15px);
+                @include color(#333);
+                font-weight: 300;
+            }
+            .many:hover {
+                @include color( #ff5000);
+            }
+        }
+        .app li {
+            @include float;
+            @include w(32px);
+            @include h(32px);
+            margin: 10px;
+            img {
+                @include w(100%);
+                @include h(100%);
+            }
+        }
+    }
 }

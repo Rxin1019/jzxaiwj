@@ -1,41 +1,59 @@
+@mixin float($lr:left) {
+    float: $lr
+}
+
+@mixin color($c:#f22e00) {
+    color: $c;
+}
+
+@mixin lineH($lh:35px) {
+    line-height: $lh
+}
+
+@mixin w($w:1190px) {
+    width: $w
+}
+
+@mixin h($h:35px) {
+    height: $h
+}
+
+@mixin fontSize($fs:12px) {
+    font-size: $fs
+}
+
 nav {
-    width: 100%;
-    height: 30px;
-    // background: red;
-}
-
-.screen-nav-warp {
-    width: 1190px;
-    height: 30px;
-    background-image: linear-gradient(to right, #ff9900 0, #ff5500 100%);
-    margin: 0 auto;
-}
-
-nav .screen-nav-warp h2 {
-    width: 190px;
-    height: 100%;
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-    background-color: #ff5000;
-    line-height: 30px;
-    float: left;
-}
-
-nav .screen-nav-warp ul {
-    float: left;
-}
-
-nav .screen-nav-warp ul li {
-    float: left;
-    margin: 0 4px;
-    padding: 0 4px;
-    position: relative;
-}
-
-nav .screen-nav-warp ul li a {
-    font-size: 16px;
-    color: #fff;
-    line-height: 30px;
-    font-weight: 700;
+    @include w(100%);
+    @include h(30px);
+    .screen-nav-warp {
+        @include w(1190px);
+        @include h(30px);
+        background-image: linear-gradient(to right, #ff9900 0, #ff5500 100%);
+        margin: 0 auto;
+        h2 {
+            @include w(190px);
+            @include h(100%);
+            color: #fff;
+            @include fontSize(16px);
+            text-align: center;
+            background-color: #ff5000;
+            @include lineH(30px);
+            @include float;
+        }
+        ul {
+            @include float;
+            li {
+                @include float;
+                margin: 0 4px;
+                padding: 0 4px;
+                position: relative;
+                a {
+                    @include fontSize(16px);
+                    color: #fff;
+                    @include lineH(30px);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
 }

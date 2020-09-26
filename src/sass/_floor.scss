@@ -1,133 +1,518 @@
-.layer {
-    width: 1190px;
-    margin: 0 auto;
-    margin-top: 10px;
-}
-
-.first-floor {
-    width: 1190px;
-    float: left;
-    height: 358px;
-    background-color: white;
-}
-
-.layer .bt1 {
-    padding-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.layer .bt1 .bt2 {
-    display: none;
-}
-
-.layer .bt1 img {
-    height: 24px;
-    margin-right: 5px;
-    float: left;
-}
-
-.layer .bt1 .bt3 {
-    line-height: 24px;
-    height: 24px;
-    color: #999;
-    font-weight: 400;
-    margin-left: 6px;
-}
-
-.layer .first-floor ul a {
-    display: block;
-    float: left;
-    width: 180px;
-    overflow: hidden;
-    margin: 0 14px 17px 0;
-}
-
-.first-floor a .img-wrapper img {
-    width: 100%;
-    height: 180px;
-    display: block;
-    opacity: .9;
-    transition: all .2s;
-}
-
-.first-floor a .info {
-    overflow: hidden;
-    padding: 0 4px 0 6px;
-}
-
-.first-floor a h4 {
-    margin-top: 5px;
-    font-size: 16px;
-    height: 28px;
-    overflow: hidden;
-    line-height: 28px;
-    font-weight: normal;
-}
-
-.first-floor a p {
-    line-height: 24px;
-    color: #999;
-    font-size: 14px;
-    overflow: hidden;
-    height: 24px;
-}
-
-.first-floor a p.extra {
-    line-height: 22px;
-    height: 22px;
-    margin-top: 12px;
-    color: #35b1ff;
-}
-
-.second-floor {
-    display: inline-block;
-    padding: 0;
-    margin-top: 10px;
-    width: 1190px;
-    height: 70px;
-}
-
-.three-floor {
-    width: 1190px;
-    height: 538px;
-}
-
-.three-floor .three-floor-l {
-    width: 590px;
-    height: 538px;
-    float: left;
-    background-color: #fff;
-}
-
-.three-floor .three-floor-r {
-    width: 590px;
-    height: 538px;
-    margin-left: 10px;
-    float: left;
-    background-color: #fff;
-}
-
-.four-floor {
-    width: 1190px;
-    height: 290px;
-    background: #333;
-}
-
-.five-floor {
-    width: 1190px;
-    height: 962px;
-    background: #666;
-}
-
-.six-floor {
-    width: 1190px;
-    height: 8120px;
-    background: grey;
-}
-
-.seven-floor {
-    width: 1190px;
-    height: 180px;
-    background: black;
-}
+    $l:left;
+    $r:right;
+    $t:top;
+    $b:bottom;
+    @mixin float($lr:left) {
+        float: $lr
+    }
+    
+    @mixin color($c:#f22e00) {
+        color: $c;
+    }
+    
+    @mixin lineH($lh:35px) {
+        line-height: $lh
+    }
+    
+    @mixin w($w:1190px) {
+        width: $w
+    }
+    
+    @mixin h($h:35px) {
+        height: $h
+    }
+    
+    @mixin fontSize($fs:12px) {
+        font-size: $fs
+    }
+    
+    .layer {
+        @include w(1190px);
+        margin: 0 auto;
+        margin-#{$t}: 10px;
+        .bt1 {
+            padding-#{$l}: 20px;
+            margin-#{$t}: 20px;
+            .bt2 {
+                display: none;
+            }
+            img {
+                @include h(24px);
+                margin-#{$r}: 5px;
+                @include float;
+            }
+            .bt3 {
+                @include h(24px);
+                @include lineH(24px);
+                @include color(#999);
+                font-weight: 400;
+                margin-#{$l}: 6px;
+            }
+        }
+        .bt {
+            position: relative;
+            padding-#{$l}: 32px;
+            margin-#{$t}: 5px;
+            @include lineH(48px);
+            @include fontSize(20px);
+        }
+        .first-floor {
+            @include w(1190px);
+            @include h(358px);
+            @include float;
+            background-color: white;
+            a:hover h4 {
+                @include color( #ff5000);
+            }
+            ul a {
+                display: block;
+                @include float;
+                @include w(180px);
+                overflow: hidden;
+                margin: 0 14px 17px 0;
+                .img-wrapper img {
+                    @include w(100%);
+                    @include h(180px);
+                    display: block;
+                    opacity: .9;
+                    transition: all .2s;
+                }
+                .info {
+                    overflow: hidden;
+                    padding: 0 4px 0 6px;
+                }
+                h4 {
+                    margin-#{$t}: 5px;
+                    overflow: hidden;
+                    font-weight: normal;
+                    @include h(28px);
+                    @include lineH(28px);
+                    @include fontSize(16px);
+                }
+                p {
+                    overflow: hidden;
+                    @include h(24px);
+                    @include lineH(24px);
+                    @include color(#999);
+                    @include fontSize(14px);
+                }
+                p.extra {
+                    @include h(22px);
+                    @include lineH(22px);
+                    margin-#{$t}: 12px;
+                    @include color(#35b1ff);
+                }
+            }
+        }
+        .second-floor {
+            display: inline-block;
+            padding: 0;
+            margin-#{$t}: 10px;
+            @include w(1190px);
+            @include h(70px);
+        }
+        .three-floor {
+            @include w(1190px);
+            @include h(538px);
+            a:hover h4 {
+                @include color( #ff5000);
+            }
+            .name {
+                @include color(#333);
+                @include h(42px);
+                @include lineH(42px);
+                font-weight: normal;
+                @include fontSize(16px);
+                vertical-align: top;
+            }
+            .big-pic {
+                @include w(180px);
+                @include h(180px);
+                overflow: hidden;
+                @include float;
+                img {
+                    @include w(180px);
+                    @include h(180px);
+                }
+            }
+            .two-pic {
+                @include h(180px);
+                margin-#{$l}: 182px;
+                .pic1 {
+                    @include w(89px);
+                    @include h(89px);
+                    overflow: hidden;
+                }
+                .pic2 {
+                    margin-#{$t}: 2px;
+                    @include w(89px);
+                    @include h(89px);
+                    overflow: hidden;
+                }
+                img {
+                    @include w(89px);
+                    @include h(89px);
+                }
+            }
+            li {
+                padding: 6px 0 20px 0;
+                margin-#{$l}: 8px;
+                @include w(271px);
+                @include float;
+                a {
+                    display: block;
+                }
+            }
+            .odd {
+                @include w(190px);
+            }
+            .three-floor-l {
+                @include w(590px);
+                @include h(538px);
+                @include float;
+                background-color: #fff;
+            }
+            .three-floor-r {
+                @include w(590px);
+                @include h(538px);
+                margin-#{$l}: 10px;
+                @include float;
+                background-color: #fff;
+                .big-pic {
+                    position: relative;
+                }
+                .live {
+                    @include color(#999);
+                    @include fontSize;
+                    margin-#{$l}: 6px;
+                    display: inline;
+                }
+                .live-warp {
+                    position: absolute;
+                    @include h(42px);
+                    @include lineH(42px);
+                    overflow: hidden;
+                    @include color(#fff);
+                    #{$l}: 0;
+                    #{$b}: 0;
+                    z-index: 30;
+                    @include fontSize(14px);
+                    font-weight: normal;
+                    .live-p {
+                        position: relative;
+                        #{$t}: 9px;
+                        @include float;
+                        @include w(46px);
+                        @include h(25px);
+                        display: block;
+                        margin-#{$r}: 2px;
+                        img {
+                            @include w(46px);
+                            @include h(20px);
+                        }
+                    }
+                }
+            }
+        }
+        .four-floor {
+            @include w(1190px);
+            @include h(290px);
+            .four-floor-l {
+                @include w(840px);
+                @include h(290px);
+                @include float;
+                background: #fff;
+                .ys {
+                    @include color(#AD45Df);
+                    border-#{$b}: 1px solid #f4f4f4;
+                    em {
+                        font-style: normal;
+                    }
+                }
+                .ys::before {
+                    content: '';
+                    position: absolute;
+                    @include w(4px);
+                    @include h(16px);
+                    #{$t}: 16px;
+                    #{$l}: 20px;
+                    background-repeat: repeat-x;
+                    background-image: linear-gradient(45deg, #8558d6, #b865e2);
+                    background: #8558d6;
+                }
+                .item:hover {
+                    border-color: #ff5000;
+                }
+                div .item {
+                    @include w(208px);
+                    @include h(234px);
+                    @include float;
+                    border: 1px solid transparent;
+                    border-#{$r}: 1px solid #f4f4f4;
+                    border-#{$b}-color: #fff;
+                    .info {
+                        padding-#{$l}: 20px;
+                        h4 {
+                            margin-#{$t}: 17px;
+                            @include fontSize(18px);
+                            @include color(#333);
+                            @include lineH(26px);
+                            @include h(26px);
+                            font-weight: normal;
+                            a:hover {
+                                color: #f22e00;
+                            }
+                        }
+                        p {
+                            @include color(#999);
+                            @include lineH(22px);
+                            @include h(22px);
+                            overflow: hidden;
+                        }
+                    }
+                    .img-wrapper-outer {
+                        margin-#{$t}: 12px;
+                        padding-#{$l}: 26px;
+                        a {
+                            margin-#{$l}: 2px;
+                            @include float;
+                        }
+                        img {
+                            @include w(150px);
+                            @include h(150px);
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .four-floor-r {
+                @include w(298px);
+                @include h(248px);
+                @include float(right);
+                border: 1px solid #fff;
+                overflow: hidden;
+                padding: 20px;
+                background: #fff;
+            }
+            .four-floor-r:hover {
+                border-color: #ff5000;
+            }
+        }
+        .five-floor {
+            @include w(1190px);
+            @include h(945px);
+            background: #fff;
+            padding-#{$t}: 17px;
+            .rm {
+                position: relative;
+                @include h(22px);
+                @include lineH(22px);
+                margin: 0 18px 17px;
+                @include fontSize(20px);
+                @include color(#FF5500)
+            }
+            .rm::before {
+                content: "";
+                position: relative;
+                @include float;
+                #{$t}: 2px;
+                @include w(4px);
+                @include h(16px);
+                background: #ff242d;
+                background: linear-gradient(to bottom, #ff7436, #ff0000);
+                margin-#{$r}: 7px;
+            }
+            .sale-hd {
+                padding: 0 0 13px 18px;
+                overflow: hidden;
+                position: relative;
+                .sale-p4p {
+                    @include float;
+                    display: block;
+                    @include h(20px);
+                    @include lineH(20px);
+                    overflow: hidden;
+                    a {
+                        @include float;
+                        margin-#{$b}: 10px;
+                        padding-#{$r}: 15px;
+                        @include color(#999);
+                        @include h(14px);
+                        @include lineH(14px);
+                        @include fontSize;
+                    }
+                    a:hover {
+                        @include color(#f22e00);
+                    }
+                }
+            }
+            .sale-bd {
+                @include h(703px);
+                .item-s {
+                    @include float;
+                    @include w(196px);
+                    position: relative;
+                    padding: 20px;
+                    border: 1px solid #f4f4f4;
+                    // margin: -1px 0 0 -1px;
+                    a {
+                        display: block;
+                        overflow: hidden;
+                        text-align: center;
+                        @include fontSize(0px);
+                        position: relative;
+                        img {
+                            @include w(197px);
+                            @include h(197px);
+                        }
+                    }
+                    .price {
+                        @include h(22px);
+                        @include lineH(22px);
+                        margin-#{$t}: 87px;
+                        span {
+                            font-family: "Microsoft Yahei";
+                        }
+                        .l {
+                            @include color(#ff5000);
+                            font-family: arial;
+                            margin-#{$r}: 3px;
+                            @include float;
+                            em {
+                                @include fontSize(22px);
+                                margin-#{$l}: 2px;
+                                font-style: normal;
+                            }
+                        }
+                        .r {
+                            @include color(#999);
+                            @include float(right);
+                            display: block;
+                            margin-#{$t}: 3px;
+                            em {
+                                @include color(#999);
+                                font-family: arial;
+                                font-style: normal;
+                            }
+                        }
+                    }
+                }
+                .item-s:nth-of-type(3),
+                .item-s:nth-of-type(8) {
+                    @include w(196px);
+                }
+                .item-s:nth-of-type(5),
+                .item-s:nth-of-type(10) {
+                    border-#{$r}: 1px solid #fff;
+                }
+                .item-s:nth-of-type(1),
+                .item-s:nth-of-type(6) {
+                    border-#{$l}: 1px solid #fff;
+                }
+                .item-s:hover {
+                    border: 1px solid #ff5000;
+                }
+            }
+            .adv {
+                margin-#{$l}: 18px;
+                @include h(170px);
+                li {
+                    float: left;
+                    @include float;
+                    @include w(375px);
+                    @include fontSize(0px);
+                    position: relative;
+                    margin: 20px 11px 0 2px;
+                }
+                li:hover {
+                    margin: 18px 9px 0 0;
+                    border: 2px solid #ff5000;
+                }
+            }
+        }
+        .six-floor {
+            @include w(1190px);
+            @include h(8120px);
+            background: #fff;
+            position: relative;
+            .six {
+                @include color(#ff9f00);
+                border-#{$b}: 1px solid #f4f4f4;
+                position: relative;
+                padding-#{$l}: 32px;
+                margin-#{$t}: 5px;
+                @include lineH(48px);
+                @include fontSize(20px);
+                em {
+                    font-style: normal;
+                    display: block;
+                }
+            }
+            .six::before {
+                content: '';
+                position: absolute;
+                @include w(4px);
+                @include h(16px);
+                #{$t}: 16px;
+                #{$l}: 20px;
+                background-repeat: repeat-x;
+                background-image: linear-gradient(45deg, #fad961, #ff9f00);
+                background: #ff9f00;
+            }
+            .list .item-c {
+                @include float;
+                padding: 20px 20px 0 20px;
+                border: 1px solid transparent;
+                @include color( #6c6c6c);
+                @include w(196px);
+                @include h(312px);
+                overflow: hidden;
+                position: relative;
+                transition: border-color 0.3s;
+                border-#{$r}-color: #f4f4f4;
+                border-#{$b}-color: #f4f4f4;
+            }
+            .item-c:hover {
+                border-color: #F40;
+                transition: border-color 0.3s;
+            }
+        }
+        .seven-floor {
+            @include w(1190px);
+            @include h(140px);
+            padding-#{$t}: 40px;
+            .last {
+                @include w(247.5px);
+                @include h(95px);
+                margin: 0 25px;
+                @include float;
+                h4 {
+                    @include fontSize(16px);
+                    margin-#{$l}: 14px;
+                    margin-#{$t}: 14px;
+                    @include float;
+                }
+                div {
+                    @include float;
+                }
+                img {
+                    @include w(50px);
+                    @include h(50px);
+                }
+                ul {
+                    @include float;
+                }
+                li {
+                    margin-#{$r}: 10px;
+                    @include float;
+                    a {
+                        @include color(#999);
+                        @include lineH(24px);
+                    }
+                }
+                a:hover {
+                    @include color( #ff5000);
+                }
+            }
+        }
+    }
