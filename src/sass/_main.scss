@@ -44,6 +44,7 @@ section {
                 border-#{$t}: none;
                 @include float;
                 background-color: #fff;
+                position: relative;
                 li {
                     @include w(150px);
                     @include h(32px);
@@ -74,16 +75,190 @@ section {
                     @include lineH(32px);
                     text-align: center;
                 }
+                .cartlist {
+                    display: none;
+                    position: absolute;
+                    left: 188px;
+                    top: 0;
+                    padding: 0 0 0 18px;
+                    width: 692px;
+                    height: 518px;
+                    border: 2px solid #F94A14;
+                    box-shadow: 2px 2px 0 #dcdadb;
+                    background-color: #FFF;
+                    color: #333;
+                    font-size: 12px;
+                    z-index: 22;
+                    .item-t {
+                        display: none;
+                    }
+                    .zi {
+                        padding-top: 10px;
+                        width: 415px;
+                        height: 490px;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        padding-right: 12px;
+                        padding-left: 10px;
+                        float: left;
+                        .full {
+                            @include w(100%);
+                        }
+                        .service-panel {
+                            font-size: 12px;
+                            margin-bottom: 5px;
+                            width: 50%;
+                            float: left;
+                            h5 {
+                                position: relative;
+                                height: 34px;
+                                line-height: 34px;
+                                font-size: 16px;
+                                color: #333;
+                            }
+                            p {
+                                line-height: 26px;
+                            }
+                            p a {
+                                color: #666;
+                                display: inline-block;
+                                margin-right: 12px;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    .pic {
+                        float: left;
+                        width: 253px;
+                        border-left: 1px solid #f4f4f4;
+                        position: relative;
+                        height: 498px;
+                        padding-top: 20px;
+                        h3 {
+                            line-height: 18px;
+                            color: #333;
+                            font-size: 14px;
+                            text-align: center;
+                            font-weight: 400;
+                        }
+                        .list-like a {
+                            display: block;
+                            width: 97px;
+                            height: 143px;
+                            padding: 10px 0 0 20px;
+                            overflow: hidden;
+                            @include float;
+                        }
+                        .list-like .img-wrapper {
+                            width: 97px;
+                            height: 97px;
+                            overflow: hidden;
+                            img {
+                                display: block;
+                                width: 98px;
+                                height: 97px;
+                            }
+                        }
+                        .list-like h5 {
+                            height: 26px;
+                            line-height: 26px;
+                            font-size: 12px;
+                            overflow: hidden;
+                            font-weight: 400;
+                            color: #999;
+                        }
+                    }
+                }
             }
             .inner-cer {
                 @include w(520px);
                 @include h(512px);
                 @include float;
                 margin: 10px 10px 0 10px;
+                overflow: hidden;
                 .pic-box {
                     @include w(520px);
                     @include h(280px);
                     overflow: hidden;
+                    position: relative;
+                    .lunbo {
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        li {
+                            @include float;
+                            @include w(520px);
+                        }
+                    }
+                    .arrow a {
+                        display: block;
+                        @include w(20px);
+                        @include h(30px);
+                        @include lineH(30px);
+                        @include color(#fff);
+                        position: absolute;
+                        #{$t}: 50%;
+                        background-color: rgba(0, 0, 0, .3);
+                    }
+                    .arrow a:hover {
+                        background-color: rgba(0, 0, 0, .5);
+                    }
+                    .arrow-l {
+                        border-#{$t}-#{$r}-radius: 15px;
+                        border-#{$b}-#{$r}-radius: 15px;
+                        background-clip: padding-box;
+                        #{$l}: 0;
+                        overflow: hidden;
+                        .l {
+                            @include w(31.3px);
+                            @include h(20px);
+                            margin: 3px 0 0 -4px;
+                            background: url(../img/lAndr.png) no-repeat;
+                            background-size: 100% 100%;
+                            background-position: 5px 1px;
+                        }
+                    }
+                    .arrow-r {
+                        border-#{$t}-#{$l}-radius: 15px;
+                        border-#{$b}-#{$l}-radius: 15px;
+                        background-clip: padding-box;
+                        #{$r}: 0;
+                        overflow: hidden;
+                        .r {
+                            @include w(31.3px);
+                            @include h(20px);
+                            margin: 3px 0 0 -4px;
+                            background: url(../img/lAndr.png) no-repeat;
+                            background-size: 100% 100%;
+                            background-position: -8px 1px;
+                        }
+                    }
+                    .circleNav {
+                        border-radius: 10px;
+                        position: absolute;
+                        #{$b}: 15px;
+                        #{$l}: 50%;
+                        @include h(13px);
+                        text-align: center;
+                        @include fontSize(0px);
+                        margin-#{$l}: -39px;
+                        background-color: rgba(255, 255, 255, .3);
+                        li {
+                            display: inline-block;
+                            margin: 3px;
+                            a {
+                                display: block;
+                                padding-#{$t}: 8px;
+                                @include w(8px);
+                                @include h(0px);
+                                border-radius: 50%;
+                                background: #fff;
+                            }
+                        }
+                        .select a {
+                            background: #ff5000;
+                        }
+                    }
                 }
                 .inner-bt {
                     @include w(520px);
@@ -292,6 +467,7 @@ section {
                         color: #000;
                         @include lineH(24px);
                         padding: 0 2px;
+                        font-weight: 900;
                     }
                     a.active {
                         border-bottom: 2px solid #ff5000;
@@ -305,8 +481,10 @@ section {
                 @include w(100%);
                 padding: 9px;
                 box-sizing: border-box;
+                ul {
+                    display: none;
+                }
                 li {
-                    @include w(130px);
                     @include h(25px);
                     @include float;
                     padding-#{$r}: 3px;

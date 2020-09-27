@@ -56,9 +56,9 @@ $b:bottom;
         }
         .search-box {
             @include float;
-            @include w(627px);
+            @include w(630px);
             @include h(87px);
-            margin-#{$l}: 50px;
+            margin-#{$l}: 68px;
             .search-t {
                 @include w(627px);
                 @include h(62px);
@@ -77,6 +77,11 @@ $b:bottom;
                         border-#{$t}-#{$r}-radius: 6px;
                         border-#{$t}-#{$l}-radius: 6px;
                         cursor: pointer;
+                    }
+                    li:nth-of-type(2):hover,
+                    li:nth-of-type(3):hover {
+                        background-color: #FFEEE5;
+                        @include color(#FF5400);
                     }
                     .current {
                         background-image: linear-gradient(to right, #ff9000 0, #ff5000 100%);
@@ -112,8 +117,8 @@ $b:bottom;
                         @include w(551px);
                         @include h(36px);
                         border: 2px solid #ff5000;
-                        border-#{$t}-#{$r}-radius: 20px;
-                        border-#{$b}-#{$r}-radius: 20px;
+                        border-#{$b}-#{$l}-radius: 20px;
+                        border-#{$t}-#{$l}-radius: 20px;
                         .search-inp {
                             @include w(472px);
                             @include h(36px);

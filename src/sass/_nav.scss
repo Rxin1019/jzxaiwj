@@ -42,16 +42,39 @@ nav {
         }
         ul {
             @include float;
+            position: relative;
             li {
                 @include float;
                 margin: 0 4px;
                 padding: 0 4px;
                 position: relative;
+                z-index: 40;
                 a {
                     @include fontSize(16px);
                     color: #fff;
                     @include lineH(30px);
                     font-weight: 700;
+                    position: relative;
+                    div {
+                        position: absolute;
+                        left: 20%;
+                        top: -35px;
+                        @include w(30px);
+                        @include h(30px);
+                        overflow: hidden;
+                    }
+                    img {
+                        display: none;
+                        position: absolute;
+                        left: 0px;
+                        top: 13px;
+                        z-index: -10;
+                    }
+                }
+            }
+            li :hover {
+                img {
+                    display: block;
                 }
             }
         }

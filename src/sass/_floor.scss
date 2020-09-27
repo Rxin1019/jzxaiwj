@@ -471,10 +471,76 @@
                 transition: border-color 0.3s;
                 border-#{$r}-color: #f4f4f4;
                 border-#{$b}-color: #f4f4f4;
+                .content .img-wrapper {
+                    @include w(197px);
+                    @include h(197px);
+                    overflow: hidden;
+                    img {
+                        opacity: .9;
+                        display: block;
+                        @include w(100%);
+                        @include h(100%);
+                        transition: opacity 0.2s;
+                    }
+                }
+                .content h4 {
+                    margin-#{$t}: 7px;
+                    @include lineH(22px);
+                    @include h(44px);
+                    @include fontSize(14px);
+                    @include color(#666);
+                    font-weight: normal;
+                    transition: color 0.3s;
+                    overflow: hidden;
+                }
+                .item-more {
+                    display: none;
+                    position: absolute;
+                    #{$b}: 0;
+                    #{$l}: 0;
+                    @include w(236px);
+                    @include h(82px);
+                    background: #FF5000;
+                    p {
+                        @include lineH(22px);
+                        @include fontSize;
+                        @include h(22px);
+                        @include color(#fff);
+                        text-align: center;
+                    }
+                    .xs {
+                        margin: 0 auto;
+                        @include w(120px);
+                        margin-#{$t}: 15px;
+                        line-height: 32px;
+                        @include lineH(32px);
+                        @include fontSize(18px);
+                        font-weight: normal;
+                        border-#{$b}: 1px solid #FE964A;
+                    }
+                }
+                .info {
+                    margin-#{$t}: 22px;
+                    @include h(24px);
+                    @include lineH(24px);
+                    .price {
+                        @include float;
+                        @include color(#f40);
+                        @include fontSize(20px);
+                    }
+                    .sale {
+                        @include float(right);
+                        @include color(#9ca0aa);
+                        margin-#{$t}: 3px;
+                    }
+                }
             }
             .item-c:hover {
                 border-color: #F40;
                 transition: border-color 0.3s;
+                .item-more {
+                    display: block;
+                }
             }
         }
         .seven-floor {
@@ -512,6 +578,97 @@
                 }
                 a:hover {
                     @include color( #ff5000);
+                }
+            }
+        }
+    }
+    
+    .tb-fixedtool {
+        .fixedtool {
+            position: fixed;
+            #{$r}: 250px;
+            #{$b}: 200px;
+            a.on,
+            a:hover {
+                z-index: 2;
+                @include color(#FFF);
+                font-weight: 700;
+                background-repeat: repeat-x;
+                background-image: linear-gradient(135deg, #ff971b, #ff5000);
+            }
+            .fixed-5:hover {
+                .t1 {
+                    display: none;
+                }
+                .t2 {
+                    display: block;
+                }
+            }
+            .wangwang {
+                position: absolute;
+                #{$l}: 5px;
+                #{$t}: -21px;
+                img {
+                    @include w(40px);
+                    @include h(40px);
+                }
+            }
+            a {
+                display: block;
+                @include h(44px);
+                @include lineH(17px);
+                @include fontSize(13px);
+                position: relative;
+                text-decoration: none;
+                padding: 6px 12px 0;
+                background: #fff;
+            }
+            a:after {
+                content: '';
+                border-bottom: 1px solid #efefef;
+                @include w(34px);
+                position: absolute;
+                #{$l}: 8px;
+                #{$b}: -1px;
+                z-index: 1;
+            }
+            .fixed-1 {
+                border-#{$t}-#{$l}-radius: 8px;
+                border-#{$t}-#{$r}-radius: 8px;
+                background-clip: padding-box;
+                padding-#{$t}: 10px;
+                @include h(40px);
+                @include color(#f40);
+            }
+            .fixed-7 {
+                border-#{$b}-#{$l}-radius: 8px;
+                border-#{$b}-#{$r}-radius: 8px;
+                background-clip: padding-box;
+            }
+            .fixed-2 {
+                @include color(#f05);
+            }
+            .fixed-3 {
+                @include color( #A8C001);
+            }
+            .fixed-4 {
+                @include color(#f40);
+            }
+            .fixed-5,
+            .fixed-6,
+            .fixed-7 {
+                @include fontSize;
+            }
+            .up {
+                @include w(20px);
+                @include h(20px);
+                margin: 0 auto;
+                img {
+                    @include w(20px);
+                    @include h(20px);
+                }
+                .t2 {
+                    display: none;
                 }
             }
         }
