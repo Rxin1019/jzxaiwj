@@ -184,3 +184,132 @@ $b:bottom;
         }
     }
 }
+
+.hide-search {
+    display: none;
+    background-color: #FFF;
+    width: 100%;
+    height: 40px;
+    padding: 7px 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    .search-warp {
+        @include w(1190px);
+        @include h(40px);
+        margin: 0 auto;
+        .logo {
+            @include w(85.8px);
+            @include h(35.4px);
+            @include float;
+            h1 {
+                position: relative;
+                .logo-bd {
+                    @include color(#3C3C3C);
+                    display: block;
+                    @include w(85.8px);
+                    @include h(35.4px);
+                    text-indent: -9999px;
+                    background: url(../img/logo.png) no-repeat 0 0;
+                    background-size: 85.8px 35.4px;
+                }
+            }
+        }
+        .search-box {
+            @include float;
+            @include w(630px);
+            @include h(40px);
+            margin-#{$l}: 172px;
+            .search-t {
+                @include w(627px);
+                @include h(40px);
+                position: relative;
+                .select:hover {
+                    height: auto;
+                    border-bottom-left-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+                .select {
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    margin-left: 0;
+                    height: 36px;
+                    overflow: hidden;
+                    background: #f4f4f4;
+                    width: 74px;
+                    position: absolute;
+                    left: 2px;
+                    top: 2px;
+                    z-index: 200;
+                    ul li {
+                        text-align: center;
+                        line-height: 36px;
+                        height: 36px;
+                        float: none;
+                        color: #3C3C3C;
+                        background-color: #f4f4f4!important;
+                        width: 74px;
+                    }
+                    li:hover {
+                        color: #ff5000;
+                        font-weight: 700;
+                    }
+                    .current {
+                        color: #3C3C3C;
+                        font-weight: 400;
+                        background-image: none;
+                        filter: none;
+                        border-top-right-radius: 0;
+                    }
+                }
+                .search-mian {
+                    position: relative;
+                    @include w(627px);
+                    @include h(40px);
+                    .btn {
+                        @include w(74px);
+                        @include h(40px);
+                        position: absolute;
+                        #{$r}: 0;
+                        #{$t}: 0;
+                        border-#{$b}-#{$r}-radius: 20px;
+                        border-#{$t}-#{$r}-radius: 20px;
+                        overflow: hidden;
+                        .submit {
+                            @include w(100%);
+                            @include h(100%);
+                            background-image: linear-gradient(to right, #ff9000 0, #ff5000 100%);
+                            border: none;
+                            @include color(#fff);
+                            @include fontSize(18px);
+                            cursor: pointer;
+                            font-weight: 700;
+                        }
+                    }
+                    .search-inp-box {
+                        @include w(551px);
+                        @include h(36px);
+                        border: 2px solid #ff5000;
+                        border-#{$b}-#{$l}-radius: 20px;
+                        border-#{$t}-#{$l}-radius: 20px;
+                        .search-inp {
+                            @include w(472px);
+                            @include h(36px);
+                            @include lineH(36px);
+                            padding-#{$l}: 5px;
+                            input {
+                                @include w(380px);
+                                @include h(24px);
+                                margin-left: 74px;
+                                padding-#{$l}: 5px;
+                                text-indent: 1em;
+                                border: none;
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

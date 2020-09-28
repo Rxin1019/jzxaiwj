@@ -191,7 +191,7 @@ section {
                         }
                     }
                     .arrow a {
-                        display: block;
+                        display: none;
                         @include w(20px);
                         @include h(30px);
                         @include lineH(30px);
@@ -209,6 +209,7 @@ section {
                         background-clip: padding-box;
                         #{$l}: 0;
                         overflow: hidden;
+                        display: none;
                         .l {
                             @include w(31.3px);
                             @include h(20px);
@@ -224,6 +225,7 @@ section {
                         background-clip: padding-box;
                         #{$r}: 0;
                         overflow: hidden;
+                        display: none;
                         .r {
                             @include w(31.3px);
                             @include h(20px);
@@ -267,25 +269,101 @@ section {
                         @include w(520px);
                         @include h(201px);
                         overflow: hidden;
-                        a {
-                            display: block;
-                            margin-#{$t}: 6px;
-                            // @include w(130px);
-                            // @include h(201px);
-                            overflow: hidden;
-                            margin-#{$l}: 6px;
+                        position: relative;
+                        .lunbo2 {
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            li {
+                                @include float;
+                                @include w(520px);
+                            }
+                        }
+                        .lunbo2 a {
                             float: left;
+                            margin-top: 6px;
+                            width: 251px;
+                            height: 190px;
+                            overflow: hidden;
+                            margin-left: 6px;
+                            border-color: #ebebeb;
                             img {
-                                @include h(155px);
+                                @include w(100%);
+                                @include h(100%);
+                            }
+                        }
+                        .solidNav {
+                            position: absolute;
+                            top: 0px;
+                            height: 3px;
+                            line-height: 0;
+                            width: 520px;
+                            font-size: 0;
+                            z-index: 9;
+                            li {
+                                display: inline-block;
+                                width: 86px;
+                                height: 3px;
+                                background: #ff1648;
+                                overflow: hidden;
+                                margin: 0;
+                                line-height: 0;
+                                font-size: 0;
+                            }
+                            .selected {
+                                background: #000;
+                            }
+                        }
+                        .arrow2 a {
+                            display: none;
+                            @include w(20px);
+                            @include h(30px);
+                            @include lineH(30px);
+                            @include color(#fff);
+                            position: absolute;
+                            #{$t}: 40%;
+                            background-color: rgba(0, 0, 0, .3);
+                        }
+                        .arrow2 a:hover {
+                            background-color: rgba(0, 0, 0, .5);
+                        }
+                        .arrow2-l {
+                            border-#{$t}-#{$r}-radius: 15px;
+                            border-#{$b}-#{$r}-radius: 15px;
+                            background-clip: padding-box;
+                            #{$l}: 0;
+                            overflow: hidden;
+                            display: none;
+                            .l2 {
+                                @include w(31.3px);
+                                @include h(20px);
+                                margin: 3px 0 0 -4px;
+                                background: url(../img/lAndr.png) no-repeat;
+                                background-size: 100% 100%;
+                                background-position: 5px 1px;
+                            }
+                        }
+                        .arrow2-r {
+                            border-#{$t}-#{$l}-radius: 15px;
+                            border-#{$b}-#{$l}-radius: 15px;
+                            background-clip: padding-box;
+                            #{$r}: 0;
+                            overflow: hidden;
+                            display: none;
+                            .r2 {
+                                @include w(31.3px);
+                                @include h(20px);
+                                margin: 3px 0 0 -4px;
+                                background: url(../img/lAndr.png) no-repeat;
+                                background-size: 100% 100%;
+                                background-position: -8px 1px;
                             }
                         }
                     }
                     .head {
                         @include fontSize(14px);
                         padding-#{$t}: 11px;
-                        border-#{$b}: 3px solid #ff1648;
                         position: relative;
-                        background-color: #f1f1f1;
                         .head-inner {
                             @include h(18px);
                             @include lineH(18px);

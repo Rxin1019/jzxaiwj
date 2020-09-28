@@ -585,9 +585,9 @@
     
     .tb-fixedtool {
         .fixedtool {
-            position: fixed;
-            #{$r}: 250px;
-            #{$b}: 200px;
+            position: absolute;
+            #{$r}: 290px;
+            #{$t}: 580px;
             a.on,
             a:hover {
                 z-index: 2;
