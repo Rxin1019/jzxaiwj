@@ -33,6 +33,41 @@ header {
     margin: 0 auto;
     .top-nav-l {
         @include float;
+        .admin {
+            display: none;
+            position: relative;
+            float: left;
+            color: #6C6C6C;
+            .admin-name {
+                width: 60px;
+                height: 35px;
+                line-height: 35px;
+                @include color;
+                text-align: center;
+            }
+            div {
+                float: left;
+                text-align: center;
+                line-height: 35px;
+            }
+            span {
+                display: none;
+                position: absolute;
+                margin-#{$t}: -1px;
+                #{$l}: 0px;
+                #{$t}: 35px;
+                background: #FFF;
+                border: 1px solid #EEE;
+                border-top: none;
+                padding: 0 5px;
+                line-height: 28px;
+                white-space: nowrap;
+                color: #6C6C6C;
+                width: 50px;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
         .region {
             margin-#{$l}: 5px;
             @include lineH;

@@ -1,0 +1,202 @@
+$l:left;
+$r:right;
+$t:top;
+$b:bottom;
+@mixin float($lr:left) {
+    float: $lr
+}
+
+@mixin color($c:#f22e00) {
+    color: $c;
+}
+
+@mixin lineH($lh:35px) {
+    line-height: $lh
+}
+
+@mixin w($w:1190px) {
+    width: $w
+}
+
+@mixin h($h:35px) {
+    height: $h
+}
+
+@mixin fontSize($fs:12px) {
+    font-size: $fs
+}
+
+.search {
+    background-color: #FFF;
+    padding-top: 24px;
+    @include h(97px);
+    .search-warp {
+        @include w(1190px);
+        @include h(73px);
+        margin: 0 auto;
+        .logo {
+            @include w(190px);
+            @include h(80px);
+            @include float;
+            margin-top: 8px;
+            h1 {
+                position: relative;
+                .logo-bd {
+                    @include color(#3C3C3C);
+                    display: block;
+                    margin-#{$l}: 22px;
+                    padding-#{$t}: 58px;
+                    @include w(142px);
+                    @include h(0px);
+                    overflow: hidden;
+                    text-indent: -9999px;
+                    background: url(../img/logo.png) no-repeat 0 0;
+                }
+            }
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,
+body {
+    @include w(100%);
+    @include h(100%);
+    color: #3C3C3C;
+    background: #fff;
+    font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif
+}
+
+body a {
+    color: #6C6C6C;
+}
+
+footer {
+    @include w(1190px);
+    @include h(180px);
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #fff;
+    p {
+        padding-#{$b}: 8px;
+    }
+    span {
+        margin: 0 4px;
+        @include color(#9c9c9c);
+    }
+    span a:hover {
+        @include color( #ff5000);
+    }
+    .tb-footer {
+        padding-#{$t}: 7px;
+        border-#{$t}: 1px solid #ddd;
+    }
+    .tb-footer p {
+        margin-#{$b}: 8px;
+        @include lineH(27px);
+        border-#{$b}: 1px solid #ddd;
+    }
+    b {
+        margin: 0 3px;
+        font-weight: 400;
+        @include color(#ddd)
+    }
+    .tb-footer a {
+        white-space: nowrap;
+        color: #6c6c6c;
+        text-decoration: none;
+    }
+    .tb-footer-bd a {
+        white-space: nowrap;
+        color: #6c6c6c;
+        text-decoration: none;
+    }
+    em {
+        @include color(#9c9c9c);
+        margin-#{$l}: 30px;
+        font-style: normal;
+    }
+    .tb-footer-mod {
+        display: inline-block;
+        vertical-align: middle;
+        background: url(../img/foot.jpg) no-repeat;
+    }
+}
+
+#wrap {
+    height: 550px;
+    // width: 100;
+    background-image: url(4.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+#wrap .logGet {
+    height: 408px;
+    width: 368px;
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 20%;
+    right: 15%;
+}
+
+.logC a input {
+    width: 100%;
+    height: 45px;
+    background-color: #ee7700;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.logGet .logD.logDtip .p1 {
+    display: inline-block;
+    font-size: 28px;
+    margin-top: 30px;
+    width: 86%;
+}
+
+#wrap .logGet .logD.logDtip {
+    width: 86%;
+    border-bottom: 1px solid #ee7700;
+    margin-bottom: 60px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logGet .lgD img {
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+
+.logGet .lgD input {
+    width: 100%;
+    height: 42px;
+    text-indent: 2.5rem;
+}
+
+#wrap .logGet .lgD {
+    width: 86%;
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#wrap .logGet .logC {
+    width: 86%;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}

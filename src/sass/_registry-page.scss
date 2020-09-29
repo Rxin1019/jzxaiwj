@@ -1,0 +1,179 @@
+$l:left;
+$r:right;
+$t:top;
+$b:bottom;
+@mixin float($lr:left) {
+    float: $lr
+}
+
+@mixin color($c:#f22e00) {
+    color: $c;
+}
+
+@mixin lineH($lh:35px) {
+    line-height: $lh
+}
+
+@mixin w($w:1190px) {
+    width: $w
+}
+
+@mixin h($h:35px) {
+    height: $h
+}
+
+@mixin fontSize($fs:12px) {
+    font-size: $fs
+}
+
+form {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    span {
+        font-size: 12px;
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+    }
+    p {
+        position: relative;
+        width: 400px;
+        height: 40px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #555;
+    position: absolute;
+    left: 10px;
+}
+
+input {
+    width: 250px;
+    height: 38px;
+    outline: none;
+    border: none;
+    vertical-align: middle;
+    position: absolute;
+    right: 10px;
+}
+
+.button {
+    width: 350px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.search {
+    background-color: #FFF;
+    padding-top: 24px;
+    @include h(97px);
+    .search-warp {
+        @include w(1190px);
+        @include h(73px);
+        margin: 0 auto;
+        .logo {
+            @include w(190px);
+            @include h(80px);
+            @include float;
+            margin-top: 8px;
+            h1 {
+                position: relative;
+                .logo-bd {
+                    @include color(#3C3C3C);
+                    display: block;
+                    margin-#{$l}: 22px;
+                    padding-#{$t}: 58px;
+                    @include w(142px);
+                    @include h(0px);
+                    overflow: hidden;
+                    text-indent: -9999px;
+                    background: url(../img/logo.png) no-repeat 0 0;
+                }
+            }
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,
+body {
+    @include w(100%);
+    @include h(100%);
+    color: #3C3C3C;
+    background: #fff;
+    font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif
+}
+
+body a {
+    color: #6C6C6C;
+}
+
+footer {
+    @include w(1190px);
+    @include h(180px);
+    margin: 0 auto;
+    margin-top: 250px;
+    background-color: #fff;
+    p {
+        padding-#{$b}: 8px;
+    }
+    span {
+        margin: 0 4px;
+        @include color(#9c9c9c);
+    }
+    span a:hover {
+        @include color( #ff5000);
+    }
+    .tb-footer {
+        padding-#{$t}: 7px;
+        border-#{$t}: 1px solid #ddd;
+    }
+    .tb-footer p {
+        margin-#{$b}: 8px;
+        @include lineH(27px);
+        border-#{$b}: 1px solid #ddd;
+    }
+    b {
+        margin: 0 3px;
+        font-weight: 400;
+        @include color(#ddd)
+    }
+    .tb-footer a {
+        white-space: nowrap;
+        color: #6c6c6c;
+        text-decoration: none;
+    }
+    .tb-footer-bd a {
+        white-space: nowrap;
+        color: #6c6c6c;
+        text-decoration: none;
+    }
+    em {
+        @include color(#9c9c9c);
+        margin-#{$l}: 30px;
+        font-style: normal;
+    }
+    .tb-footer-mod {
+        display: inline-block;
+        vertical-align: middle;
+        background: url(../img/foot.jpg) no-repeat;
+    }
+}

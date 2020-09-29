@@ -8,6 +8,41 @@ header {
 header .top-nav-l {
   float: left;
 }
+header .top-nav-l .admin {
+  display: none;
+  position: relative;
+  float: left;
+  color: #6C6C6C;
+}
+header .top-nav-l .admin .admin-name {
+  width: 60px;
+  height: 35px;
+  line-height: 35px;
+  color: #f22e00;
+  text-align: center;
+}
+header .top-nav-l .admin div {
+  float: left;
+  text-align: center;
+  line-height: 35px;
+}
+header .top-nav-l .admin span {
+  display: none;
+  position: absolute;
+  margin-top: -1px;
+  left: 0px;
+  top: 35px;
+  background: #FFF;
+  border: 1px solid #EEE;
+  border-top: none;
+  padding: 0 5px;
+  line-height: 28px;
+  white-space: nowrap;
+  color: #6C6C6C;
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+}
 header .top-nav-l .region {
   margin-left: 5px;
   line-height: 35px;

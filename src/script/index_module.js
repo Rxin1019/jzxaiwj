@@ -4,7 +4,7 @@ define([], function() {
             //热卖单品渲染
             const $list = $('.sale-bd');
             $.ajax({
-                    url: 'http://192.168.13.75/p/xiangmu/php/taobao.php',
+                    url: 'http://localhost/p/xiangmu/php/taobao.php',
                     dataType: 'json'
                 })
                 .done((data) => {
@@ -13,7 +13,7 @@ define([], function() {
                     $.each($renderdata, function(index, value) {
                         $strhtml += `
                 <li class="item-s">
-                        <a href="index.html?sid=${value.sid}">
+                        <a href="detail.html?sid=${value.sid}">
                             <img class="lazy" src="${value.url}" />  
                         </a>
                         <div class="price">
@@ -41,7 +41,7 @@ define([], function() {
             //猜你喜欢渲染
             const $list2 = $('.six-floor .list');
             $.ajax({
-                    url: 'http://192.168.13.75/p/xiangmu/php/taobao.php',
+                    url: 'http://localhost/p/xiangmu/php/taobao.php',
                     dataType: 'json'
                 })
                 .done((data) => {
@@ -51,7 +51,7 @@ define([], function() {
                         $strhtml += `
 
                 <div class="item-c">
-                    <a href="index.html?sid=${value.sid}" class="content">
+                    <a href="detail.html?sid=${value.sid}" class="content">
                         <div class="img-wrapper">
                             <img class="lazy" src="${value.url}">
                         </div>
@@ -73,7 +73,7 @@ define([], function() {
                         $strhtml += `
 
                 <div class="item-c">
-                    <a href="index.html?sid=${value.sid}" class="content">
+                    <a href="detail.html?sid=${value.sid}" class="content">
                         <div class="img-wrapper">
                             <img class="lazy" src="${value.url}">
                         </div>
@@ -95,7 +95,7 @@ define([], function() {
                         $strhtml += `
 
                 <div class="item-c">
-                    <a href="index.html?sid=${value.sid}" class="content">
+                    <a href="detail.html?sid=${value.sid}" class="content">
                         <div class="img-wrapper">
                             <img class="lazy" src="${value.url}">
                         </div>
@@ -117,7 +117,7 @@ define([], function() {
                         $strhtml += `
 
                 <div class="item-c">
-                    <a href="index.html?sid=${value.sid}" class="content">
+                    <a href="detail.html?sid=${value.sid}" class="content">
                         <div class="img-wrapper">
                             <img class="lazy" src="${value.url}">
                         </div>
@@ -306,11 +306,58 @@ define([], function() {
                 })
             })
             $('.fixed-5').click(function() {
-                    $('html').animate({
-                        scrollTop: 0
-                    })
+                $('html').animate({
+                    scrollTop: 0
                 })
-                //右侧tab切换
+            });
+
+            //存储
+            if (localStorage.getItem('username')) {
+                $('.member-foot').hide();
+                $('.admin').show();
+                $('.hide').hide();
+                $('.admin-name').html(localStorage.getItem('username'));
+                $('.hello i').html(localStorage.getItem('username'));
+            }
+            $('.admin-name').hover(function() {
+                    $('.admin-name').css({
+                        background: '#fff'
+                    })
+                    $('.admin span').slideDown();
+                },
+                function() {
+                    $('.admin-name').css({
+                        background: '#f4f4f4'
+                    })
+                    $('.admin span').hide();
+                });
+            $('.admin span').hover(function() {
+                    $('.admin-name').css({
+                        background: '#fff'
+                    })
+                    $('.admin span').css({
+                        color: '#f22e00'
+                    })
+                    $('.admin span').show();
+                },
+                function() {
+                    $('.admin-name').css({
+                        background: '#f4f4f4'
+                    })
+                    $('.admin span').css({
+                        color: '#6C6C6C'
+                    })
+                    $('.admin span').slideUp();
+                });
+            $('.admin span').on('click', function() {
+                if (window.confirm('你确定退出登录吗？')) {
+                    localStorage.removeItem('username');
+                    $('.admin').hide();
+                    $('.top-nav-menu:nth-of-type(2)').show();
+                    $('.member-foot').show();
+                }
+            });
+            //右侧tab切换
             $('.notice .title li').hover(function() {
                 $('.notice .title li a').removeClass('active');
                 $(this).children().addClass('active');
