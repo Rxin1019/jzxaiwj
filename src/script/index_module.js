@@ -14,7 +14,7 @@ define([], function() {
                         $strhtml += `
                 <li class="item-s">
                         <a href="detail.html?sid=${value.sid}">
-                            <img class="lazy" src="${value.url}" />  
+                            <img class="lazy" data-original="${value.url}" />  
                         </a>
                         <div class="price">
                             <div class="l">
@@ -53,7 +53,7 @@ define([], function() {
                 <div class="item-c">
                     <a href="detail.html?sid=${value.sid}" class="content">
                         <div class="img-wrapper">
-                            <img class="lazy" src="${value.url}">
+                            <img class="lazy" data-original="${value.url}">
                         </div>
                         <h4>${value.title}</h4>
                     </a>
@@ -75,7 +75,7 @@ define([], function() {
                 <div class="item-c">
                     <a href="detail.html?sid=${value.sid}" class="content">
                         <div class="img-wrapper">
-                            <img class="lazy" src="${value.url}">
+                            <img class="lazy" data-original="${value.url}">
                         </div>
                         <h4>${value.title}</h4>
                     </a>
@@ -97,7 +97,7 @@ define([], function() {
                 <div class="item-c">
                     <a href="detail.html?sid=${value.sid}" class="content">
                         <div class="img-wrapper">
-                            <img class="lazy" src="${value.url}">
+                            <img class="lazy" data-original="${value.url}">
                         </div>
                         <h4>${value.title}</h4>
                     </a>
@@ -119,7 +119,7 @@ define([], function() {
                 <div class="item-c">
                     <a href="detail.html?sid=${value.sid}" class="content">
                         <div class="img-wrapper">
-                            <img class="lazy" src="${value.url}">
+                            <img class="lazy" data-original="${value.url}">
                         </div>
                         <h4>${value.title}</h4>
                     </a>
